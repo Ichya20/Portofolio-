@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjelajah Labirin: Duel DFS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧩 Penjelajah Labirin: Duel DFS</h1>
+        <p>Bandingkan performa algoritma DFS Rekursif vs Iteratif dalam menyelesaikan labirin</p>
+    </header>
+
+    <main class="container">
+        <!-- Panel Kontrol -->
+        <section id="panel-kontrol" class="panel">
+            <h2>⚙️ Panel Kontrol</h2>
+            
+            <div class="input-group">
+                <label for="input-lebar">Lebar Labirin:</label>
+                <input type="number" id="input-lebar" min="5" max="50" value="15">
+            </div>
+            
+            <div class="input-group">
+                <label for="input-tinggi">Tinggi Labirin:</label>
+                <input type="number" id="input-tinggi" min="5" max="50" value="15">
+            </div>
+            
+            <div class="input-group">
+                <label for="input-kecepatan">Kecepatan Animasi:</label>
+                <input type="range" id="input-kecepatan" min="1" max="100" value="50">
+                <span id="label-kecepatan">50</span>
+            </div>
+            
+            <div class="button-group">
+                <button id="btn-buat" class="btn btn-primary">🎲 Buat Labirin Baru</button>
+                <button id="btn-rekursif" class="btn btn-success">🔄 Selesaikan (Rekursif)</button>
+                <button id="btn-iteratif" class="btn btn-warning">📚 Selesaikan (Iteratif)</button>
+                <button id="btn-bersihkan" class="btn btn-secondary">🧹 Bersihkan Jalur</button>
+            </div>
+        </section>
+
+        <!-- Area Visual -->
+        <section id="area-visual" class="panel">
+            <h2>🎨 Visualisasi Labirin</h2>
+            <div class="canvas-wrapper">
+                <canvas id="maze-canvas"></canvas>
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="color-box" style="background-color: #4ade80;"></span> Start</div>
+                <div class="legend-item"><span class="color-box" style="background-color: #f87171;"></span> Finish</div>
+                <div class="legend-item"><span class="color-box" style="background-color: #60a5fa;"></span> Rekursif (Dikunjungi)</div>
+                <div class="legend-item"><span class="color-box" style="background-color: #c084fc;"></span> Iteratif (Dikunjungi)</div>
+                <div class="legend-item"><span class="color-box" style="background-color: #fbbf24;"></span> Jalur Solusi</div>
+            </div>
+        </section>
+
+        <!-- Panel Analisis -->
+        <section id="panel-analisis" class="panel">
+            <h2>📊 Panel Analisis</h2>
+            <div id="konten-analisis">
+                <p class="placeholder">Jalankan algoritma untuk melihat hasil analisis...</p>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="chart-canvas"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Analisis Kompleksitas Algoritma | Dibuat dengan Hati-hati dan Penuh Ketelitian</p>
+        <p class="made-by">Made by: Ichya, Lutfi, Zaky</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
